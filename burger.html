@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/burger.css">
+    <title>Document</title>
+</head>
+<body>
+
+
+        <nav class="nav-bar">
+        <nav class="nav-bar">
+        <nav class="nav-bar">
+        <nav class="nav-bar">
+            
+            
+            
+            
+
+            <a href="#" class="logo">ADVENTURE</a>
+            <div class="nav-links">
+                <ul>
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Adventures</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Infos</a></li>
+                </ul>
+            </div>
+            <svg class="menu-hamburger" id="menu-hamburger"
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="white">
+            <path 
+                d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z">
+            </path>
+            </svg>
+        </nav>
+    <header class="header"></header>
+</body>
+<script>
+    const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+</script>
+</html>
