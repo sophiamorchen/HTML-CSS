@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+.header {
+    background-image: url(".../images/fond-ecran-taranaki.jpg");
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+}
+.nav-bar {
+    position: absolute;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.nav-bar a {
+    color: white;
+}
+.nav-bar .logo {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.nav-bar .nav-links ul {
+    display: flex;
+}
+.nav-bar .nav-links ul li {
+    margin: 0 25px;
+}
+.nav-bar .nav-links ul li.active a {
+    color: red;
+    font-weight:600;
+}
+.nav-bar .menu-hamburger {
+    display: none;
+    position: absolute;
+    top: 2.7rem;
+    right: 2.7rem;
+    width: 2.2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .nav-bar{
+     padding: 0;
+    }    
+    .nav-bar .logo {
+        position: absolute;
+        top: 3.1rem;
+        left: 3.1rem;
+    }
+    .nav-bar .menu-hamburger {
+        display: block;
+    }
+    .nav-links{ /* représente le "volet" entier / "volet déroulant" */
+        top: 0;
+        left: 0; /*Important de ples placer, ne pas oublier le "position"*/
+        position: absolute; 
+        background-color: rgba(255, 255, 255, 0.20);
+        backdrop-filter: blur(4px);
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+        /* le margin left ( -100% ) fait sortir le menu à gauche;
+        rappellons nous que la classe  "mobile-menu"
+         n'apparaît au côtés de nav-links qu'au
+        "clic" ( cf : <script> / cf : "devTools" ) 
+        ce code ne s'exécute qu'à ce mmoment là
+        */
+        
+    } 
+    .nav-links.mobile-menu {
+        margin-left: 0;
+    }
+    .nav-links ul {       
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-bar .nav-links ul li {
+        margin: 25px 0;
+        font-size: 1.2em
+    }
+}
+
+
